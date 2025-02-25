@@ -1,0 +1,275 @@
+// Base selectors
+
+// Layout
+
+html {
+  font-size: 1rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $dark;
+  font-family: $txt-font;
+  font-weight: normal;
+  font-size: 1rem;
+  background-color: $bg-white;
+  padding: 0;
+}
+
+.wrapper {
+  position: relative;
+  background-image: url("../../sources/img/Background.png");
+
+  width: 100%;
+  height: 100vh;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.logo {
+  max-width: 147px;
+  height: 36px;
+}
+
+.container {
+  box-sizing: border-box;
+
+  width: 100%;
+  padding: 0 50px;
+  margin: 0 auto;
+
+  @media (min-width: $xxl) {
+    max-width: 1400px;
+  }
+
+  @media (max-width: $xl) {
+    max-width: 1320px;
+  }
+
+  @media (max-width: $xl) {
+    max-width: 1140px;
+  }
+
+  @media (max-width: $lg) {
+    max-width: 960px;
+    padding: 0 30px;
+  }
+
+  @media (max-width: $md) {
+    max-width: 720px;
+  }
+
+  @media (max-width: $sm) {
+    max-width: 540px;
+    padding: 0 20px;
+  }
+}
+
+.container-404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.container-fluid {
+  max-width: 100%;
+}
+
+// Tags
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $main-font;
+  font-weight: 400;
+
+  margin: 0;
+  padding: 0;
+  position: relative;
+  color: $dark;
+  letter-spacing: normal;
+}
+
+h1 {
+  font-size: 2.5rem;
+
+  @media (max-width: $xl) {
+    font-size: 2.1rem;
+  }
+
+  @media (max-width: $lg) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: $sm) {
+    font-size: 1.24rem;
+  }
+}
+
+h2 {
+  font-size: 2.188rem;
+
+  @media (max-width: $xl) {
+    font-size: 1.75rem;
+  }
+
+  @media (max-width: $lg) {
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: $sm) {
+    font-size: 1.125rem;
+  }
+}
+
+p {
+  font-family: $txt-font;
+  margin: 25px 0;
+
+  font-size: 1.15rem;
+  word-break: break-word;
+  font-weight: 400;
+
+  &:first-child {
+    margin-top: 0px;
+  }
+}
+
+span {
+  font-family: $main-font;
+  font-weight: 400;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: $main-font;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+
+  &:focus-visible {
+    outline: 1px solid $dark;
+  }
+}
+
+.text * {
+  top: calc(1em+ 2em);
+}
+
+select,
+input {
+  outline: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: 700;
+}
+
+hr,
+img {
+  border: none;
+}
+
+ul {
+  font-size: 1rem;
+  font-family: $txt-font;
+
+  list-style: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0 0 0 24px;
+
+  word-break: break-word;
+  font-weight: 400;
+
+  @media (min-width: $md) {
+    font-size: 1.15rem;
+  }
+}
+
+ul li {
+  font-size: 1.25rem;
+  font-weight: 400;
+
+  @media (max-width: $xl) {
+    font-size: 1rem;
+  }
+}
+
+ol {
+  font-size: 1.15rem;
+  font-family: $main-font;
+  list-style-position: inside;
+}
+
+// iframe {
+//     max-width: 100%;
+
+//     @media (max-width: $lg) {
+//         height: 450px;
+//     }
+// }
+
+// pre {
+//     margin: 0;
+// }
+
+// Links
+a {
+  font-family: $main-font;
+  text-decoration: none;
+  color: $color-primary-2;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $link-pressed;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $dark;
+  }
+}
+
+// Img
+
+.img-responsive {
+  width: auto;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}

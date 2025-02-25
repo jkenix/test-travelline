@@ -1,0 +1,11 @@
+{
+  "name": "jkenix-test-travelline",
+  "version": "1.0.0",
+  "scripts": {
+    "scss": "sudo sass --watch --sourcemap=none --style=compressed sources/scss/styles.scss:sources/css/styles.css"
+  },
+  "author": "jkenix",
+  "devDependencies": {
+    "sass": "^1.65.0"
+  }
+}
