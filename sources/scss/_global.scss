@@ -18,61 +18,42 @@ body {
 
 .wrapper {
   position: relative;
-  background-image: url("../../sources/img/Background.png");
 
   width: 100%;
   height: 100vh;
-}
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.logo {
-  max-width: 147px;
-  height: 36px;
+  & .wrapper__img {
+    height: inherit;
+    width: 100%;
+    position: absolute;
+  }
 }
 
 .container {
   box-sizing: border-box;
 
   width: 100%;
-  padding: 0 50px;
   margin: 0 auto;
 
-  @media (min-width: $xxl) {
+  @media (min-width: $xl) {
+    padding: 0 50px;
     max-width: 1400px;
   }
 
   @media (max-width: $xl) {
-    max-width: 1320px;
-  }
-
-  @media (max-width: $xl) {
-    max-width: 1140px;
+    max-width: 768px;
   }
 
   @media (max-width: $lg) {
-    max-width: 960px;
     padding: 0 30px;
   }
 
   @media (max-width: $md) {
-    max-width: 720px;
+    padding: 0 15px;
+    max-width: 567px;
   }
 
   @media (max-width: $sm) {
-    max-width: 540px;
-    padding: 0 20px;
   }
 }
 
@@ -89,8 +70,20 @@ body {
   max-width: 100%;
 }
 
-// Tags
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
+// Tags
 h1,
 h2,
 h3,
@@ -105,38 +98,6 @@ h6 {
   position: relative;
   color: $dark;
   letter-spacing: normal;
-}
-
-h1 {
-  font-size: 2.5rem;
-
-  @media (max-width: $xl) {
-    font-size: 2.1rem;
-  }
-
-  @media (max-width: $lg) {
-    font-size: 1.5rem;
-  }
-
-  @media (max-width: $sm) {
-    font-size: 1.24rem;
-  }
-}
-
-h2 {
-  font-size: 2.188rem;
-
-  @media (max-width: $xl) {
-    font-size: 1.75rem;
-  }
-
-  @media (max-width: $lg) {
-    font-size: 1.4rem;
-  }
-
-  @media (max-width: $sm) {
-    font-size: 1.125rem;
-  }
 }
 
 p {
@@ -251,6 +212,7 @@ a {
   color: $color-primary-2;
 
   &:hover {
+    color: $color-primary-2;
     text-decoration: underline;
   }
 

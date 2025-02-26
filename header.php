@@ -18,3 +18,6 @@
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 
 <div class="wrapper">
+<?= wp_get_attachment_image(25, 'full', false, [
+	'class' => 'wrapper__img img-responsive'
+]) ?>
