@@ -11,13 +11,8 @@ $xxxl: 1599.98px;
 $main-font: "Roboto", sans-serif;
 $txt-font: "Open Sans", sans-serif;
 
-// Colors body
-$header-bg-color: #fff;
-$body-bg-color: #fff;
-
 // Bg
-$bg-dark: rgb(0, 0, 0);
-$bg-white: rgb(255, 255, 255);
+$body-bg-color: rgb(0, 0, 0);
 
 // Colors
 $dark: rgb(0, 0, 0);
@@ -33,4 +28,13 @@ $secondary: rgb(60, 62, 67);
 $link-pressed: rgb(255, 151, 176);
 
 // Box shadows
+$border-rad-btn: 5px;
 $border-rad-card: 10px;
+$border-rad-card__pay: 0 0 10px 10px;
+
+// Gradient
+$gradient-1: linear-gradient(
+  180deg,
+  rgba(10, 34, 64, 0.1),
+  rgb(10, 34, 64) 100%
+);
