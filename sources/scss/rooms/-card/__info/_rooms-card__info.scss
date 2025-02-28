@@ -1,6 +1,8 @@
 // Info
 .rooms-card__info {
   @include row;
+  flex-wrap: wrap;
+
   justify-content: space-between;
   gap: 25px;
 
@@ -19,11 +21,7 @@
 
     color: $white;
 
-    max-width: 117px;
-    max-height: 56px;
-
-    overflow-y: auto;
-    overflow-x: hidden;
+    max-width: 100%;
   }
 
   &--price--desc {
@@ -40,6 +38,11 @@
   }
 
   &--price--value {
+    max-width: 100%;
+    word-break: break-all;
+    max-height: 32px;
+    overflow: auto;
+
     .from {
       font-size: 1.188rem;
       font-weight: 700;

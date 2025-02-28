@@ -188,7 +188,7 @@
 
     width: 100%;
     max-width: 180px;
-    max-height: 48px;
+    min-height: 48px;
 
     &:hover {
       background-color: $color-primary-3;
