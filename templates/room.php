@@ -34,11 +34,11 @@
         <?php
         // Если задан заголовок, то вывести
         if (!empty(get_field("rooms-title"))) : ?>
-            <a class="rooms-card__title rooms-card__item" href="#" target="_blank"><?php echo esc_html(get_field("rooms-title")); ?> </a>
+            <a class="rooms-card__title rooms-card__item" href="<?php echo esc_url(get_permalink()); ?>" target="_blank"><?php echo esc_html(get_field("rooms-title")); ?> </a>
         <?php
         // Иначе вывести заголовок поста
         else: ?>
-            <a class="rooms-card__title rooms-card__item" href="#" target="_blank"><?php echo the_title(); ?> </a>
+            <a class="rooms-card__title rooms-card__item" href="<?php echo esc_url(get_permalink()); ?>" target="_blank"><?php echo the_title(); ?> </a>
         <?php endif; ?>
 
         <?php
