@@ -1,6 +1,7 @@
 // Info
 .rooms-card__info {
   @include row;
+  justify-content: space-between;
   gap: 25px;
 
   padding-top: 17px;
@@ -11,13 +12,18 @@
 
   @media (max-width: $xl) {
     flex-direction: column;
-    gap: 15px;
   }
 
   &--price {
     @include column;
 
     color: $white;
+
+    max-width: 117px;
+    max-height: 56px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   &--price--desc {
