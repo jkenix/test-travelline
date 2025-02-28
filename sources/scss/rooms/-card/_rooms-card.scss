@@ -148,6 +148,9 @@
 
     text-align: left;
 
+    max-height: 160px;
+    overflow: auto;
+
     &:hover {
       color: $white;
     }
@@ -188,7 +191,9 @@
 
     width: 100%;
     max-width: 180px;
+
     min-height: 48px;
+    max-height: 48px;
 
     &:hover {
       background-color: $color-primary-3;

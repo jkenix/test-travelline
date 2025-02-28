@@ -4,7 +4,3 @@ Author: Dmitriy
 Author URI: https://github.com/jkenix
 Version: 1.0
 */
-
-.text * {
-  top: calc(1em+ 2em);
-}
