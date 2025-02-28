@@ -5,28 +5,37 @@
 html {
   font-size: 1rem;
   scroll-behavior: smooth;
+
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
+  background-color: $body-bg-color;
+
   color: $dark;
+
   font-family: $txt-font;
   font-weight: normal;
   font-size: 1rem;
-  background-color: $body-bg-color;
+
   padding: 0;
+  margin: 0;
 }
 
 .wrapper {
   position: relative;
 
   width: 100%;
-  height: 100vh;
+  height: 100%;
 
   & .wrapper__img {
-    height: inherit;
+    height: 100vh;
     width: 100%;
     position: absolute;
 
+    -webkit-user-select: none;
     user-select: none;
   }
 }
@@ -54,9 +63,6 @@ body {
     padding: 0 15px;
     max-width: 567px;
   }
-
-  @media (max-width: $sm) {
-  }
 }
 
 .container-404 {
@@ -71,19 +77,6 @@ body {
 
 .container-fluid {
   max-width: 100%;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 // Tags
@@ -123,26 +116,29 @@ span {
 button,
 input,
 select,
+optgroup,
 textarea {
   font-family: $main-font;
   margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+
+  overflow: visible;
 
   &:focus-visible {
     outline: 1px solid $dark;
   }
 }
 
-.text * {
-  top: calc(1em+ 2em);
+button,
+select {
+  text-transform: none;
 }
 
-select,
-input {
-  outline: none;
-}
+// select,
+// input {
+//   outline: none;
+// }
 
 button,
 html input[type="button"],
@@ -151,8 +147,11 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-strong {
-  font-weight: 700;
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  appearance: button;
 }
 
 hr,
@@ -160,55 +159,10 @@ img {
   border: none;
 }
 
-ul {
-  font-size: 1rem;
-  font-family: $txt-font;
-
-  list-style: none;
-}
-
-ul,
-ol {
-  margin: 0;
-  padding: 0 0 0 24px;
-
-  word-break: break-word;
-  font-weight: 400;
-
-  @media (min-width: $md) {
-    font-size: 1.15rem;
-  }
-}
-
-ul li {
-  font-size: 1.25rem;
-  font-weight: 400;
-
-  @media (max-width: $xl) {
-    font-size: 1rem;
-  }
-}
-
-ol {
-  font-size: 1.15rem;
-  font-family: $main-font;
-  list-style-position: inside;
-}
-
-// iframe {
-//     max-width: 100%;
-
-//     @media (max-width: $lg) {
-//         height: 450px;
-//     }
-// }
-
-// pre {
-//     margin: 0;
-// }
-
 // Links
 a {
+  background-color: transparent;
+
   font-family: $main-font;
   text-decoration: none;
   color: $color-primary-2;
@@ -236,4 +190,8 @@ a {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+img {
+  border-style: none;
 }

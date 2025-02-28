@@ -1,6 +1,6 @@
 <?php // Добавлять reversed класс, если номер забронирован
 ?>
-<article class="rooms-card <?php echo (!empty(get_field("rooms-reversed")) ? 'rooms-card--reversed' : ''); ?>">
+<div class="rooms-card <?php echo (!empty(get_field("rooms-reversed")) ? 'rooms-card--reversed' : ''); ?>">
 
     <?php
     // Если поставлена галочка вывода мотиватора, то выводить его
@@ -18,12 +18,14 @@
     $image_id = attachment_url_to_postid($url); // Получаем id миниатюры поста комнаты
     // Выводим миниатюру:
     ?>
-    <?= wp_get_attachment_image(
-        $image_id,
-        'full',
-        null,
-        ['class' => 'rooms-card__bg img-responsive', 'itemprop' => 'image']
-    ) ?>
+    <div class="rooms-card__bg-wrap" itemscope itemtype="https://schema.org/ImageObject">
+        <?= wp_get_attachment_image(
+            $image_id,
+            'full',
+            null,
+            ['class' => 'rooms-card__bg img-responsive', 'itemprop' => 'image']
+        ) ?>
+    </div>
 
     <?php // Добавлять reversed класс, если номер забронирован
     ?>
@@ -42,7 +44,7 @@
         <?php
         // Если задано описание, то вывести
         if (!empty(get_field("rooms-desc"))) : ?>
-            <p class="rooms-card__desc rooms-card__item" href="#" target="_blank"><?php echo get_field("rooms-desc"); ?> </p>
+            <p class="rooms-card__desc rooms-card__item"><?php echo get_field("rooms-desc"); ?> </p>
         <?php endif; ?>
 
         <?php
@@ -72,4 +74,4 @@
         <?php endif; ?>
 
     </div>
-</article>
+</div>

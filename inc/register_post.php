@@ -39,5 +39,3 @@ function additional_taxonomies_room()
     register_taxonomy_for_object_type('post_tag', 'rooms');
     register_taxonomy_for_object_type('category', 'rooms');
 }
-
-?>

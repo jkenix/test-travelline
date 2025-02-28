@@ -4,7 +4,7 @@ $md: 767.98px;
 $lg: 991.98px;
 $xl: 1279.98px;
 $xxl: 1399.98px;
-$xxxl: 1599.98px;
+// $xxxl: 1599.98px;
 // $hd: 1919.98px;
 
 // Fonts
@@ -23,6 +23,7 @@ $color-primary-1: rgb(249, 17, 85);
 $color-primary-2: rgb(255, 75, 119);
 $color-primary-3: rgb(216, 0, 63);
 $secondary: rgb(60, 62, 67);
+$gray: rgb(153, 153, 153);
 
 // Links
 $link-pressed: rgb(255, 151, 176);
@@ -30,7 +31,7 @@ $link-pressed: rgb(255, 151, 176);
 // Box shadows
 $border-rad-btn: 5px;
 $border-rad-card: 10px;
-$border-rad-card__pay: 0 0 10px 10px;
+$border-rad-card__pay: 0px 0px 10px 10px;
 
 // Gradient
 $gradient-1: linear-gradient(
@@ -38,3 +39,4 @@ $gradient-1: linear-gradient(
   rgba(10, 34, 64, 0.1),
   rgb(10, 34, 64) 100%
 );
+$gradient-2: linear-gradient(180deg, rgba(10, 34, 64, 0.1), #b4b4b4 100%);

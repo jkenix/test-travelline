@@ -1,0 +1,210 @@
+// Cards
+.rooms-card {
+  @include column;
+  justify-content: end;
+
+  width: 100%;
+
+  height: inherit;
+
+  border-radius: $border-rad-card;
+
+  position: relative;
+
+  transition: all 0.1s ease;
+
+  &::before {
+    background: $gradient-1;
+    border-radius: inherit;
+
+    content: "";
+
+    display: block;
+    position: absolute;
+
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+
+  &:hover {
+    .rooms-card__motivator {
+      @include row;
+    }
+  }
+
+  @media (min-width: $xl) {
+    max-width: 372px;
+    min-height: 372px;
+  }
+
+  @media (max-width: $xl) {
+    max-width: 336px;
+    min-height: 420px;
+  }
+
+  @media (max-width: $md) {
+    max-width: 288px;
+    min-height: 347px;
+  }
+
+  // States
+  &--active,
+  &--reversed {
+    cursor: pointer;
+
+    &:hover {
+      .rooms-card__motivator {
+        display: none;
+      }
+    }
+
+    &::before {
+      background: $gradient-2;
+    }
+  }
+
+  &--reversed {
+    cursor: default;
+
+    .rooms-card__info--payment .check-pay {
+      display: none;
+    }
+  }
+
+  // Bg
+  &__bg-wrap {
+    border-radius: $border-rad-card;
+  }
+
+  &__bg {
+    border-radius: inherit;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    margin: 0;
+
+    height: 100%;
+    width: 100%;
+
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  // Motivator
+  &__motivator {
+    display: none;
+
+    width: 100%;
+    max-width: 213px;
+    min-height: 30px;
+
+    position: static;
+    padding-left: 24px;
+    padding-top: 24px;
+
+    z-index: 10;
+
+    transition: all 0.1s;
+
+    &-content {
+      background: $accent;
+      color: $white;
+
+      padding: 4px 4px 0 16px;
+      font-family: $main-font;
+      font-size: 0.875rem;
+      font-weight: 700;
+      line-height: 21px;
+    }
+
+    &-badge {
+      position: static;
+      width: 36px;
+      height: 30px;
+
+      -webkit-user-select: none;
+      user-select: none;
+    }
+  }
+
+  // Elements
+  &__title {
+    color: $white;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    line-height: 32px;
+
+    text-align: left;
+
+    &:hover {
+      color: $white;
+    }
+
+    &:active {
+      color: rgba($white, 0.5);
+    }
+
+    @media (max-width: $md) {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 26px;
+    }
+  }
+
+  &__desc {
+    color: $white;
+
+    line-height: 24px;
+
+    @media (max-width: $md) {
+      font-size: 0.875rem;
+      line-height: 21px;
+    }
+  }
+
+  // Btns
+  &__btn {
+    background-color: $color-primary-1;
+    border-radius: $border-rad-btn;
+
+    color: $white;
+
+    transition: all 0.1s;
+
+    width: 100%;
+    max-width: 180px;
+    height: 48px;
+
+    &:hover {
+      background-color: $color-primary-3;
+      box-shadow: 0px 4px 4px 0px rgba($dark, 0.25);
+    }
+
+    @media (max-width: $xl) {
+      max-width: 288px;
+    }
+
+    &--active {
+      background-color: $color-primary-3;
+      color: rgb(249, 99, 124);
+
+      pointer-events: none;
+    }
+
+    &--reversed {
+      pointer-events: none;
+    }
+  }
+}

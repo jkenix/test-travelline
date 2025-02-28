@@ -1,0 +1,86 @@
+// Info
+.rooms-card__info {
+  @include row;
+  gap: 25px;
+
+  padding-top: 17px;
+  border-top: 2px solid rgba($white, 0.2);
+  border-radius: $border-rad-card__pay;
+
+  transition: all 0.1s;
+
+  @media (max-width: $xl) {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &--price {
+    @include column;
+
+    color: $white;
+  }
+
+  &--price--desc {
+    font-family: $txt-font;
+    font-size: 1rem;
+    font-weight: 700;
+
+    line-height: 24px;
+
+    @media (max-width: $md) {
+      font-size: 0.875rem;
+      line-height: 21px;
+    }
+  }
+
+  &--price--value {
+    .from {
+      font-size: 1.188rem;
+      font-weight: 700;
+
+      line-height: 24px;
+
+      @media (max-width: $md) {
+        font-size: 1.063rem;
+      }
+    }
+
+    .number {
+      color: $color-primary-2;
+
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 32px;
+
+      @media (max-width: $md) {
+        font-size: 1.25rem;
+      }
+    }
+
+    .val {
+      color: $gray;
+
+      font-size: 1.438rem;
+      line-height: 32px;
+
+      @media (max-width: $md) {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  &--payment {
+    align-items: center;
+    display: none;
+
+    color: $white;
+
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 21px;
+
+    .pay {
+      color: $color-primary-2;
+    }
+  }
+}

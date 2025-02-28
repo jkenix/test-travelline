@@ -1,0 +1,51 @@
+// Content
+.rooms-card__content {
+  @include column;
+  justify-content: end;
+
+  padding: 24px;
+
+  height: 100%;
+
+  z-index: 10;
+
+  @media (max-width: $md) {
+    padding: 21px;
+  }
+
+  &--active,
+  &--reversed {
+    padding: 0;
+
+    .rooms-card__item {
+      padding: 0 24px;
+      pointer-events: none;
+
+      @media (max-width: $md) {
+        padding: 0 21px;
+      }
+    }
+
+    .rooms-card__info {
+      align-items: center;
+      justify-content: center;
+
+      background: $secondary;
+      border-top: none;
+
+      padding: 0;
+
+      width: 100%;
+      height: 96px;
+    }
+
+    .rooms-card__info--payment {
+      @include column;
+    }
+
+    .rooms-card__info--price,
+    .rooms-card__btn {
+      display: none;
+    }
+  }
+}

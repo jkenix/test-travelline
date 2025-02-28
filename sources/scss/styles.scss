@@ -3,10 +3,12 @@
 @import "variables";
 @import "mixins";
 @import "global";
-@import "keyframes";
 
 // Blocks
-@import "rooms";
+@import "rooms/_rooms";
+@import "rooms/-card/_rooms-card";
+@import "rooms/-card/__content/rooms-card__content";
+@import "rooms/-card/__info/rooms-card__info";
 
 // Elements
 @import "btn";

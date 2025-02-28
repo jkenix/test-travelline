@@ -1,0 +1,52 @@
+.rooms {
+  padding: 239px 0px;
+
+  // Media rooms
+  @media (max-width: $xl) {
+    padding: 27px 0px;
+  }
+
+  // Classes
+  &-container {
+    @media (min-width: $xl) {
+      max-width: 1262px;
+    }
+  }
+
+  &__content {
+    @include row;
+    justify-content: center;
+    gap: 23px;
+
+    @media (max-width: $xl) {
+      flex-wrap: wrap;
+      gap: 19px;
+    }
+
+    @media (max-width: $md) {
+      gap: 32px;
+    }
+  }
+
+  // H1 title
+  &__title {
+    color: $dark;
+
+    font-size: 2.25rem;
+    font-weight: 500;
+
+    line-height: 55px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    margin-bottom: 33px;
+
+    @media (max-width: $md) {
+      font-size: 1.5rem;
+      font-weight: 700;
+
+      line-height: 32px;
+    }
+  }
+}
