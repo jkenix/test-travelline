@@ -17,9 +17,9 @@
     @include row;
     justify-content: center;
     gap: 23px;
+    flex-wrap: wrap;
 
     @media (max-width: $xl) {
-      flex-wrap: wrap;
       gap: 19px;
     }
 
